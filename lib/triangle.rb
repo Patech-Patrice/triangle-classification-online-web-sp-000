@@ -19,18 +19,18 @@ end
 
 
 class Triangle
-  attr_accessor :partner, :name
+  attr_accessor :equilateral, :isosceles, :scalene
  
   def initialize(name)
     @name = name
   end
  
   def get_married(person)
-    self.partner = person
-    if person.class != Person
+    self.partner = triangle
+    if person.class != Triangle
       begin
-        raise PartnerError
-      rescue PartnerError => error
+        raise TriangleError
+      rescue TriangleError => error
           puts error.message
       end
     else
