@@ -17,7 +17,7 @@ class Triangle
     
       rescue TriangleError => error
           puts error.message
-      end
+      
     else
       triangle.partner = self
     end
