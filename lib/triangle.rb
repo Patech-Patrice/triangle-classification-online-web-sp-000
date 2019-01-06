@@ -25,21 +25,20 @@ class Triangle
     @name = name
   end
  
-  def get_married(person)
+  def kind(triangle)
     self.partner = triangle
-    if person.class != Triangle
+    if triangle.class != Triangle
       begin
         raise TriangleError
       rescue TriangleError => error
           puts error.message
       end
     else
-      person.partner = self
+      triangle.partner = self
     end
   end
  
   class TriangleError < StandardError
-    
   end
   
 end
