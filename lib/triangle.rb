@@ -14,14 +14,14 @@ class Triangle
 def kind()
     if (@a <= 0) || (@b <= 0) || (@c <= 0)
       raise TriangleError
-    elsif (@a+@b <= @c) || (@a+@c <= @b) || (@b+@c <= @side_1)
+    elsif (@a+@b <= @c) || (@a+@c <= @b) || (@b+@c <= @a)
       raise TriangleError
     else
-      if (@side_1 == @side_2) && (@side_2 == @side_3)
+      if (@a == @b) && (@b == @c)
         :equilateral
-      elsif (@side_1 == @side_2) || (@side_2 == @side_3) || (@side_1 == @side_3)
+      elsif (@a == @b) || (@b == @c) || (@a == @c)
         :isosceles
-      elsif (@side_1 != @side_2) && (@side_2 != @side_3) && (@side_1 != @side_3)
+      elsif (@a != @b) && (@b != @c) && (@a != @c)
         :scalene
       end
     end
