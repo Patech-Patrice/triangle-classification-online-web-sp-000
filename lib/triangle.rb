@@ -3,10 +3,42 @@
 
 class Triangle
   attr_accessor :a, :b, :c
+  
   def initialize(a, b, c)
-    @b = b
+    @a = a
+    @b = b    #side_1=a side_2=b side_3=c
     @c = c
   end
+
+
+def kind()
+    if (@a <= 0) || (@b <= 0) || (@c <= 0)
+      raise TriangleError
+    elsif (@a+@b <= @c) || (@a+@c <= @b) || (@side_2+@side_3 <= @side_1)
+      raise TriangleError
+    else
+      if (@side_1 == @side_2) && (@side_2 == @side_3)
+        :equilateral
+      elsif (@side_1 == @side_2) || (@side_2 == @side_3) || (@side_1 == @side_3)
+        :isosceles
+      elsif (@side_1 != @side_2) && (@side_2 != @side_3) && (@side_1 != @side_3)
+        :scalene
+      end
+    end
+
+  end
+
+end
+
+
+
+
+
+
+
+
+
+
 
   def kind
     if kosher_triangle == true && kosher_triangle2 == true 
