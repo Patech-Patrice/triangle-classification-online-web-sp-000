@@ -1,20 +1,3 @@
-class Triangle
-  
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
