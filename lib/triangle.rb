@@ -6,7 +6,7 @@ class Triangle
   
   def initialize(a, b, c)
     @a = a
-    @b = b    #side_1=a side_2=b side_3=c
+    @b = b    
     @c = c
   end
 
