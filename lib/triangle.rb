@@ -14,7 +14,7 @@ class Triangle
 def kind()
     if (@a <= 0) || (@b <= 0) || (@c <= 0)
       raise TriangleError
-    elsif (@a+@b <= @c) || (@a+@c <= @b) || (@side_2+@side_3 <= @side_1)
+    elsif (@a+@b <= @c) || (@a+@c <= @b) || (@b+@c <= @side_1)
       raise TriangleError
     else
       if (@side_1 == @side_2) && (@side_2 == @side_3)
