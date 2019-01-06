@@ -6,7 +6,9 @@ class Triangle
  
   def initialize(:equilateral, :isosceles, :scalene)
     @equilateral = equilateral
-  end
+    @isosceles = isosceles
+    @scalene = scalene
+    end
  
   def kind(triangle)
     self.partner = triangle
